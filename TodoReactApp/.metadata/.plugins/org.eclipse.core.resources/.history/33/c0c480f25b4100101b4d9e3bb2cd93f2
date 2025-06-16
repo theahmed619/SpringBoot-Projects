@@ -1,0 +1,37 @@
+package com.todo.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.AutoConfigureOrder;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.todo.entity.Todo;
+import com.todo.service.TodoService;
+
+@RestController
+public class TodoController {
+	
+	@Autowired
+	private TodoService todoService;
+	
+	@PostMapping("/add")
+	private ResponseEntity<Todo> addTodo(@RequestBody Todo todo){
+		Todo saved = todoService.addTodo(todo);
+		
+		return new ResponseEntity<>(saved,HttpStatus.CREATED);
+	}
+	
+	@GetMapping("/showall")
+	private ResponseEntity<List<Todo>> showAllTodos(){
+		List<Todo> todoList = todoService.showAllTodos();
+		
+		return new ResponseEntity<>(todoList,HttpStatus.OK);
+	}
+
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+    <body >
+
+          <div th:fragment="projects">
+              <!-- Projects Section-->
+              <section class="py-5">
+                  <div class="container px-5 mb-5">
+                      <div class="text-center mb-5">
+                          <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">Projects</span></h1>
+                      </div>
+                      <div class="row gx-5 justify-content-center">
+                          <div class="col-lg-11 col-xl-9 col-xxl-8">
+                              <!-- Project Card 1-->
+                              <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
+                                  <div class="card-body p-0">
+                                      <div class="d-flex align-items-center">
+                                          <div class="p-5 w-100">
+                                              <div class="d-flex justify-content-between align-items-center mb-3">
+                                                  <h2 class="fw-bolder mb-0">Hospital Management System</h2>
+                                                  <a href="https://github.com/theahmed619/Advanced-Java-Projects/tree/main/Hospital_Management_System" target="_blank" class="btn btn-outline-primary">
+                                                      View Project
+                                                  </a>
+                                              </div>
+                                              <p>
+                                                  A web-based application developed using Java Servlet, JSP, JDBC, and MySQL, styled with Bootstrap. This system allows efficient management of hospital operations including patient registration, doctor scheduling, appointment booking, and medical records management.
+                                              </p>
+                                          </div>
+<!--                                          <img class="img-fluid" src="https://images.unsplash.com/photo-1588776814546-cdbd15b9a34d" alt="..." />-->
+                                      </div>
+                                  </div>
+                              </div>
+                              <!-- Project Card 2-->
+                              <div class="card overflow-hidden shadow rounded-4 border-0">
+                                  <div class="card-body p-0">
+                                      <div class="d-flex align-items-center">
+                                          <div class="p-5 w-100">
+                                              <div class="d-flex justify-content-between align-items-center mb-3">
+                                                  <h2 class="fw-bolder mb-0">Movie Booking App (Backend)</h2>
+                                                  <a href="https://github.com/theahmed619/SpringBoot-Tutorials/tree/main/" target="_blank" class="btn btn-outline-primary">
+                                                      View Project
+                                                  </a>
+                                              </div>
+                                              <p>
+                                                  A secure and scalable backend developed using Java Spring Boot, Spring Security with JWT for authentication, and Hibernate ORM for database operations. This RESTful API supports user authentication, movie listings, seat reservations, and booking management for a seamless movie ticketing experience.
+                                              </p>
+                                          </div>
+<!--                                          <img class="img-fluid w-10" src="/assets/images/hms.png" alt="..." />-->
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </section>
+              <!-- Call to action section-->
+              <section class="py-5 bg-gradient-primary-to-secondary text-white">
+                  <div class="container px-5 my-5">
+                      <div class="text-center">
+                          <h2 class="display-4 fw-bolder mb-4">Let's build something together</h2>
+                          <a class="btn btn-outline-light btn-lg px-5 py-3 fs-6 fw-bolder" th:href="@{/contact}">Contact me</a>
+                      </div>
+                  </div>
+              </section>
+          </div>
+
+    </body>
+</html>

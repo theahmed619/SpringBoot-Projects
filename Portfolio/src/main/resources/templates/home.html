@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+
+    </head>
+    <body >
+
+         <div th:fragment="home">
+             <!-- Header-->
+
+             <header class="py-5 mt-5">
+                 <div class="container px-5">
+                     <div class="text-center">
+                         <div class="fs-3 fw-light text-muted">Hello 👋 </div>
+                         <h1 class="display-3 fw-bolder mb-3">
+                             <span class="text-gradient d-inline">Ahmed here!</span>
+                         </h1>
+                         <div class="text-center my-3">
+
+                             <p class="lead fw-light mb-4 fs-2">
+                                 Software Developer
+                             </p>
+                             <p class="text-muted mb-4">
+                                 Aspiring Full Stack Developer with academic experience in Java, Spring Boot, and frontend development.</br> Eager to apply coding skills, learn from real-world projects, and contribute to building effective software solutions.</p>
+                             <div class="d-flex justify-content-center fs-2 gap-4">
+                                 <a class="text-gradient" href="https://x.com/theahmedshaikh" target="_blank"><i class="bi bi-twitter"></i></a>
+                                 <a class="text-gradient" href="https://www.linkedin.com/in/ahmed619/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                                 <a class="text-gradient" href="https://github.com/theahmed619" target="_blank"><i class="bi bi-github"></i></a>
+                             </div>
+                         </div>                         <div class="d-grid gap-3 d-sm-flex justify-content-center mb-3">
+                             <a class="btn btn-primary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder" th:href="@{/resume}">Resume</a>
+                             <a class="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder" th:href="@{/projects}">Projects</a>
+                         </div>
+
+
+                     </div>
+
+                 </div>
+             </header>
+         </div>
+
+    </body>
+</html>
